@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clipboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Remote Clipboard</h1>
+      <div class="sender">
+        <input
+          type="text"
+          name="input-text"
+          id="input-text"
+          placeholder="Enter your text here"
+        />
+        <br><br>
+        <button type="submit" id="send-text">Send</button>
+        <div class="secretCode" id="secretCode">
+
+        </div>
+      </div>
+
+      <div class="retriever">
+        <input
+          type="text"
+          name="retrieve"
+          id="retrieve"
+          placeholder="Enter code to retrieve text"
+        /> <sl-copy-button value="Shoelace rocks!" onclick="copy()"></sl-copy-button>
+
+      
+
+        <br><br>  
+        <button type="submit" id="retrieve-text">Retrieve</button>
+        <div id="error-message"></div>
+        <div id="message">
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/components/copy-button/copy-button.js"></script>
+  <script src="script.js"></script>
+</html>
