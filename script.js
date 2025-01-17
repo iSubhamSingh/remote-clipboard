@@ -1,12 +1,13 @@
 
 const sendBtn = document.getElementById("send-text");
 const retrieveBtn = document.getElementById("retrieve-text");
+const backendUrl = "https://remote-clipboard-backend.onrender.com/api/";
 
 sendBtn.addEventListener("click", (event) => {
   const sentTextBox = document.getElementById("input-text");
 
 
-  const response = fetch("http://localhost:3000/api", {
+  const response = fetch(backendUrl, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -49,7 +50,7 @@ retrieveBtn.addEventListener("click", async (event) => {
      
     messageContainer.textContent = 'Loading...';
 
-    const response = await fetch(`http://localhost:3000/api/${code}`, {
+    const response = await fetch(`${backendUrl}${code}`, {
       method: "GET",
       headers: {
         Accept: "application/json",
