@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/themes/light.css">
     <title>Clipboard</title>
   </head>
   <body>
@@ -26,9 +27,11 @@
         <input
           type="text"
           name="retrieve"
-          id="retrieve"
+          id="retrieve" 
+          readonly
           placeholder="Enter code to retrieve text"
         /> <sl-copy-button value="Shoelace rocks!" onclick="copy()"></sl-copy-button>
+        <sl-icon name="trash" style="color: red; font-size: 18px; cursor: pointer;"title="Clear text" class="tooltip" onclick="deleteItem()"></sl-icon>
 
         <br><br>  
         <button type="submit" id="retrieve-text">Retrieve</button>
@@ -39,6 +42,7 @@
     </div>
   </body>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/components/copy-button/copy-button.js"></script>
+ <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"></script>
   <script src="script.js"></script>
 </html>
 
