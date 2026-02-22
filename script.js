@@ -86,3 +86,10 @@ retrieveBtn.addEventListener("click", async (event) => {
 function copy(){
   navigator.clipboard.writeText(document.getElementById('retrieve').value)
 }
+
+function deleteItem(){
+  const retrieveField = document.getElementById('retrieve');
+  retrieveField.value = '';
+  console.log("deletae buttonn clicked");
+  
+}
